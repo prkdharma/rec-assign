@@ -1,0 +1,26 @@
+<h3>customer details</h3>
+
+<form #idform=ngForm (ngSubmit)=findCustomer(idform)>
+
+    <label>Customer Id</label>
+    <input type="number" name="customerid" ngModel>
+
+    <input type="submit" value="Search">
+</form>
+<br>
+
+<div *ngIf="customer!==undefined">
+    Name is {{customer.name | uppercase}}
+    Balance is {{customer.balance | currency:'INR'}}
+</div>
+<br>
+
+<a [href]="https://github.com/">github</a>
+<br>
+
+
+
+Length of string present= {{"dharma" | length}}
+<br>
+Length of string present in name={{customer.name|length}}
+<br>
